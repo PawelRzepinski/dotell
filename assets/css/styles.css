@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.component {
+    background-color: var(--backgroundColor);
+    padding: 50px 20px;
+}
+
+.component__title {
+    color: var(--textColor);
+    font-size: var(--titleFontSize);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    min-width: 177px;
+}
+
+.stats__icon {
+    display: block;
+    font-size: var(--titleFontSize);
+    color: var(--numbersColor);
+    min-height: 50px;
+}
+
+.stats__number {
+    color: var(--numbersColor);
+    font-size: var(--numbersFontSize);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.stats__text {
+    color: var(--textColor);
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .component__content-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .stats {
+        margin: 20px;
+    }
+}

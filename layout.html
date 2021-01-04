@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+        <title>Recruitment task - Paweł Rzepiński</title>
+        <style>
+            :root {
+                {{#each style}}
+                    --{{@key}}: {{this}};
+                {{/each}}
+            }
+        </style>
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="https://kit.fontawesome.com/af9bab70c0.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <section class="component">
+            <h1 class="component__title">{{title}}</h1>
+            <div class="component__content-wrapper" data-time="{{numbersRunningSpeedMilisecond}}">
+                {{#each sections}}
+                <div class="stats" data-value="{{this.number.value}}">
+                    <i class="stats__icon {{this.icon}}"></i>
+                    <p class="stats__number">{{this.number.prefix}} <span class="stats__value">0</span> {{this.number.suffix}}</p>
+                    <p class="stats__text">{{this.paragraph}}</p>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+
+    <script src="./js/jquery.numscroll.js"></script>
+    <script src="./js/viewport-show.js"></script>
+    <script src="./js/app.js"></script>
+    </body>
+</html>
